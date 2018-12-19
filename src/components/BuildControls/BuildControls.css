@@ -1,0 +1,10 @@
+.build
+{
+    width: 70%;
+    margin: 0 15% 0 15%;
+    max-width: 100%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    background-color: #eee;
+}

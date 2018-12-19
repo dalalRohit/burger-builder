@@ -1,0 +1,9 @@
+.price{
+    width: 50%;
+    margin: auto;
+    max-width: 100%;
+    background-color: burlywood;
+    font-size: 1.5em;
+    margin-bottom: 30px;
+    text-align: center;
+}
