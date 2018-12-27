@@ -8,6 +8,7 @@ import classes from './BurgerIngredient.css'
 
 class BurgerIngredient extends Component {
     render() {
+        //i=ingredient
         let i = null;
 
         switch (this.props.type) {

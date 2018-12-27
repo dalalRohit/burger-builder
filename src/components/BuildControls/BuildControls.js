@@ -1,5 +1,8 @@
 import React from 'react'
 
+//BUTTON
+import Button from '@material-ui/core/Button';
+
 //BuildControl
 import BuildControl from './BuildControl/BuildControl';
 
@@ -15,6 +18,29 @@ const controls = [
 
 
 const buildControls = (props) => {
+    let b = null;
+
+    //getting ingre value(Number) from state
+    //if total sum of ing is 0,disable the button
+    let sum = Object.keys(props.ingredients).map((i) => {
+        return props.ingredients[i];
+    }).reduce((cur, el) => {
+        return cur + el;
+    }, 0);
+
+    if (sum === 0) {
+        b = (
+            <Button disabled variant="contained" color='secondary'>Order Now</Button>
+        );
+    }
+    else {
+        b = (
+            <Button variant="contained" onClick={props.ordered} color='secondary'>Order Now</Button>
+        );
+    }
+
+
+
     return (
         <div className={classes.build}>
             {
@@ -28,6 +54,7 @@ const buildControls = (props) => {
                         remove={() => { props.remove(control.type) }} />;
                 })
             }
+            {b}
         </div>
     )
 };

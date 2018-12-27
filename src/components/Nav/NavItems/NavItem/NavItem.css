@@ -1,0 +1,44 @@
+.NavItem{
+    margin: 10px 0;
+    box-sizing: border-box;
+
+    display: block;
+    height: 100%;
+    
+}
+
+.NavItem a{
+    text-decoration: none;
+    height: 100%;
+    padding: 16px 10px;
+    border-bottom: 4px solid white;
+    box-sizing: border-box;
+    display: block;
+}
+
+.NavItem a:hover,
+.NavItem a:active,
+.NavItem a.active{
+    border-bottom: 4px solid #501d73;
+}
+
+@media screen and  (min-width:500px)
+{
+    .NavItem{
+        margin: 10px 0;
+        display: flex;
+        align-items: center;
+        width: 100%;
+        display: block;
+        width: auto;
+        
+    }
+
+    .NavItem a{
+        text-decoration: none;
+        width: 100%;
+        box-sizing: border-box;
+        display: block;
+    }
+   
+}
